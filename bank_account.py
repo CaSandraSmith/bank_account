@@ -20,6 +20,9 @@ class BankAccount:
     def add_interest(self):
         pass
 
+    def print_receipt(self):
+        pass
+
 account1 = BankAccount("Ca", 123)
 print(account1.full_name)
 print(account1.routing_number)
