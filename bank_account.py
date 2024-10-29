@@ -11,6 +11,9 @@ class BankAccount:
     def deposit(self):
         pass
 
+    def withdraw(self):
+        pass
+
 account1 = BankAccount("Ca", 123)
 print(account1.full_name)
 print(account1.routing_number)
