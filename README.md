@@ -9,5 +9,5 @@ Bank Account is a class-based Python program to simulate interactions that someo
 
 
 ### References
-https://realpython.com/python-f-strings/
-https://stackoverflow.com/questions/63026713/leading-zeros-are-not-allowed-in-python
+1. https://realpython.com/python-f-strings/
+2. https://stackoverflow.com/questions/63026713leading-zeros-are-not-allowed-in-python
