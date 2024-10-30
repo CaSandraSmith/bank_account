@@ -44,11 +44,13 @@ class BankAccount:
         print(f"You accumulated ${interest:.2f} this month. Your new balance is ${self.balance:.2f}.")
 
     def print_receipt(self):
-        pass
+        print(self.full_name)
+        print(f"Account No.: ****{str(self.account_number)[4:]}")
+        print(f"Routing No.: {self.routing_number}")
+        print(f"Balance: ${self.balance:.2f}")
 
-account1 = BankAccount("Ca", 123)
-print(account1.balance)
+account1 = BankAccount("Ca Smith", 123)
 account1.deposit(100)
 account1.withdraw(40)
-account1.add_interest()
-print(account1.balance)
+print(account1.account_number)
+account1.print_receipt()
