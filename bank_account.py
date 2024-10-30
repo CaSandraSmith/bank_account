@@ -2,14 +2,18 @@ import random
 
 
 class BankAccount:
-    def __init__(self, full_name, routing_number, balance = 0):
+    def __init__(self, full_name, routing_number):
         self.full_name = full_name
         self.routing_number = routing_number
-        self.balance = balance
+        self.balance = 0
         self.account_number = random.randrange(10000000, 99999999)
 
-    def deposit(self):
-        pass
+    def deposit(self, amount):
+        # increase deposit by amount
+        # print new balance
+
+        self.balance += amount
+        print(f"“Amount deposited: ${amount} new balance: ${self.balance}")
 
     def withdraw(self):
         pass
