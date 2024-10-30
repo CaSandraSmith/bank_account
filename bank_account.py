@@ -59,7 +59,7 @@ account1.deposit(100)
 account1.withdraw(80)
 account1.get_balance()
 
-account2 = BankAccount("Mitchell", 39890, int("03141592"), "checking")
+account2 = BankAccount("Mitchell", 39890, "checking", int("03141592"))
 account2.deposit(400000)
 account2.print_receipt()
 account2.add_interest()
