@@ -2,11 +2,11 @@ import random
 
 
 class BankAccount:
-    def __init__(self, full_name, routing_number):
+    def __init__(self, full_name, routing_number, account_number = random.randrange(10000000, 99999999)):
         self.full_name = full_name
         self.routing_number = routing_number
         self.balance = 0
-        self.account_number = random.randrange(10000000, 99999999)
+        self.account_number = account_number
 
     def deposit(self, amount):
         # increase deposit by amount
@@ -45,12 +45,24 @@ class BankAccount:
 
     def print_receipt(self):
         print(self.full_name)
-        print(f"Account No.: ****{str(self.account_number)[4:]}")
+        print(f"Account No.: ****{str(self.account_number)[-4:]}")
         print(f"Routing No.: {self.routing_number}")
         print(f"Balance: ${self.balance:.2f}")
 
-account1 = BankAccount("Ca Smith", 123)
+account1 = BankAccount("Ca'Sandra Smith", 12356)
 account1.deposit(100)
-account1.withdraw(40)
-print(account1.account_number)
-account1.print_receipt()
+account1.withdraw(80)
+account1.get_balance()
+
+account2 = BankAccount("Mitchell", 39890, int("03141592"))
+account2.deposit(400000)
+account2.print_receipt()
+account2.add_interest()
+account2.print_receipt()
+account2.withdraw(150)
+account2.print_receipt()
+
+account3 = BankAccount("James Marshall", 23074)
+account3.deposit(20)
+account1.withdraw(25)
+account1.get_balance()
