@@ -34,7 +34,14 @@ class BankAccount:
         return self.balance
 
     def add_interest(self):
-        pass
+        # multiply to get interest for month
+        # Add interest to balance
+        # Print message to user about new balance and accumulated interest
+
+        interest = self.balance * 0.00083
+        self.balance += interest
+
+        print(f"You accumulated ${interest:.2f} this month. Your new balance is ${self.balance:.2f}.")
 
     def print_receipt(self):
         pass
@@ -43,5 +50,5 @@ account1 = BankAccount("Ca", 123)
 print(account1.balance)
 account1.deposit(100)
 account1.withdraw(40)
-account1.get_balance()
-print(account1.get_balance())
+account1.add_interest()
+print(account1.balance)
