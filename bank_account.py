@@ -13,10 +13,21 @@ class BankAccount:
         # print new balance
 
         self.balance += amount
-        print(f"“Amount deposited: ${amount} new balance: ${self.balance}")
+        print(f"Amount deposited: ${amount:.2f} new balance: ${self.balance:.2f}")
 
-    def withdraw(self):
-        pass
+    def withdraw(self, amount):
+        # subtract amount from balance
+        # print new balance
+        # if new balance is less than zero
+            # print insufficient funds message
+            # subtract overdraft fee
+        
+        self.balance -= amount
+        print(f"Amount withdrawn: ${amount:.2f} new balance: ${self.balance:.2f}")
+
+        if self.balance < 0:
+            print("Insufficient funds.")
+            self.balance -= 10
 
     def get_balance(self):
         pass
@@ -28,13 +39,8 @@ class BankAccount:
         pass
 
 account1 = BankAccount("Ca", 123)
-print(account1.full_name)
-print(account1.routing_number)
 print(account1.balance)
-print(account1.account_number)
-
-account2 = BankAccount("Smith", 111, 3)
-print(account2.full_name)
-print(account2.routing_number)
-print(account2.balance)
-print(account2.account_number)
+account1.deposit(100)
+account1.withdraw(40)
+account1.withdraw(70)
+print(account1.balance)
